@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    
+    link(rel="stylesheet", href="feed.css")
+
+<div className="navb">
+<h1>FashionMode</h1>
+
+<ul>
+  <li><a href="/OurServices">OurServices</li>
+
+  <li><a href="/HomePage">HomePage</a></li>
+    <li><a href="/ContactUs">ContactUs</a></li>
+</ul>
+
+
+</div>
+
+
+
+
+block content
+  .contact-us-page
+    header
+      h1 Contactez-nous
+
+    section.contact-info
+      h2 Informations de Contact
+      p
+        | Pour toute question, préoccupation ou demande de renseignements, n'hésitez pas à nous contacter.
+        | Voici nos coordonnées :
+      address
+        p
+          strong Adresse :
+          | 123, Rue de la Mode
+        p
+          strong Ville :
+          | Fashionville
+        p
+          strong Code Postal :
+          | 12345
+      p
+        strong Téléphone :
+        | +1 555-123-4567
+      p
+        strong Email :
+        a(href="mailto:contact@fashionstore.com") contact@fashionstore.com
+
+    section.contact-form
+      h2 Formulaire de Contact
+      form(action="/submit-contact", method="POST")
+        label(for="name") Votre Nom :
+        input(type="text", id="name", name="name", required)
+        
+        label(for="email") Votre Email :
+        input(type="email", id="email", name="email", required)
+        
+        label(for="message") Votre Message :
+        textarea(id="message", name="message", rows="4", required)
+
+        button(type="submit") Envoyer
